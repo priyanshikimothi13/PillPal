@@ -1,0 +1,156 @@
+/* Color Palette */
+:root {
+    --primary: #FF9AA2;  /* Soft pink */
+    --secondary: #FFB7B2; /* Lighter pink */
+    --accent: #FFDAC1;    /* Peach */
+    --light: #E2F0CB;     /* Mint */
+    --dark: #B5EAD7;      /* Soft teal */
+    --text: #5E5E5E;      /* Dark gray */
+}
+
+body {
+    font-family: 'Short Stack', 'Comic Neue', cursive;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.mascot {
+    width: 60px;
+    height: 60px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-top: 5px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hero-text h2 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    max-width: 300px;
+    border-radius: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    color: var(--text);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-image img {
+        margin-top: 20px;
+        max-width: 200px;
+    }
+    
+    .logo {
+        flex-direction: column;
+    }
+}
