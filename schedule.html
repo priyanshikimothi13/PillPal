@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Medicine Schedule | PillPal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Short+Stack&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Pill<span>Pal</span></h1>
+                <img src="images/pill-icon.png" alt="PillPal mascot" class="mascot">
+            </div>
+            <p class="tagline">Your friendly pill reminder 💊❤️</p>
+        </header>
+
+        <main>
+            <section class="schedule-section">
+                <h2>My Medicine Schedule</h2>
+                
+                <div class="add-medicine">
+                    <button id="add-med-btn" class="cta-button">+ Add Medicine</button>
+                    
+                    <div id="med-form" class="medicine-form" style="display: none;">
+                        <h3>Add New Medicine</h3>
+                        <form id="medicine-form">
+                            <div class="form-group">
+                                <label for="med-name">Medicine Name</label>
+                                <input type="text" id="med-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="med-dosage">Dosage</label>
+                                <input type="text" id="med-dosage" placeholder="e.g., 1 tablet" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="med-time">Time of Day</label>
+                                <select id="med-time" required>
+                                    <option value="">Select time</option>
+                                    <option value="morning">Morning</option>
+                                    <option value="afternoon">Afternoon</option>
+                                    <option value="evening">Evening</option>
+                                    <option value="night">Night</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="med-duration">Duration (days)</label>
+                                <input type="number" id="med-duration" min="1" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="med-notes">Notes (optional)</label>
+                                <textarea id="med-notes" rows="2"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="email-reminder"> Send email reminders
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="cta-button">Save Medicine</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="schedule-cards">
+                    <!-- This will be populated by JavaScript -->
+                    <div class="empty-state">
+                        <img src="images/empty-schedule.png" alt="No medicines added yet">
+                        <p>You haven't added any medicines yet. Click the button above to get started!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Made with 💖 for your health</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
