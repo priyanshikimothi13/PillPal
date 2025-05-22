@@ -149,6 +149,164 @@ footer {
         margin-top: 20px;
         max-width: 200px;
     }
+    /* Schedule Page Styles */
+.schedule-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.schedule-section h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.add-medicine {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.medicine-form {
+    background-color: var(--accent);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.medicine-form h3 {
+    color: var(--text);
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.schedule-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.med-card {
+    background-color: white;
+    border: 2px solid var(--secondary);
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+.med-card h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.med-card .dosage {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.med-card .time {
+    display: inline-block;
+    background-color: var(--light);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.med-card .status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status.pending {
+    background-color: #FFF3CD;
+    color: #856404;
+}
+
+.status.taken {
+    background-color: #D4EDDA;
+    color: #155724;
+}
+
+.status.skipped {
+    background-color: #F8D7DA;
+    color: #721C24;
+}
+
+.med-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.med-actions button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.med-actions .taken-btn {
+    background-color: var(--dark);
+    color: white;
+}
+
+.med-actions .skip-btn {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.empty-state {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 40px 20px;
+}
+
+.empty-state img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    color: var(--text);
+}
     
     .logo {
         flex-direction: column;
